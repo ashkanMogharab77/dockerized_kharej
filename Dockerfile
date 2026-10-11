@@ -16,6 +16,9 @@ RUN apk update && apk upgrade
 #WORKDIR /app/downloader_bot
 #RUN pip install --no-cache-dir --break-system-packages -r requirements
 
+WORKDIR /etc
+COPY x-ui/ ./x-ui
+
 WORKDIR /app
 
 ENTRYPOINT []
